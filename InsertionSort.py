@@ -6,7 +6,3 @@ def insertion_sort(arr):
       arr[j + 1], j = arr[j], j - 1
     arr[j + 1] = current
   return arr
-
-
-arr = [5, 10, -1, -100, 3, 17]
-print(insertion_sort(arr))

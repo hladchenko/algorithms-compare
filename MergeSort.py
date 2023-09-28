@@ -27,7 +27,3 @@ def array_copy(arr, start, end):
   for i in range(start, end):
     res.append(arr[i])
   return res
-
-
-arr = [15, 3, 12, -1, 17, 5]
-print(merge_sort(arr))

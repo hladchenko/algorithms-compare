@@ -5,7 +5,3 @@ def bubble_sort(arr):
       if arr[j] > arr[j + 1]:
         arr[j], arr[j + 1] = arr[j + 1], arr[j]
   return arr
-
-
-arr = [10, 1, -5, 3, 7]
-print(bubble_sort(arr))
