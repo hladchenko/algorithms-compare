@@ -8,28 +8,28 @@ import MergeSort
 
 def get_execution_time(choice):
   i = 2
-  while i < 10_000_000:
+  while i < 20_000:
     total_time, repeats = 0, 10
     for j in range(repeats):
-      arr = generate_array()
-      start_time = time.time()
+      arr = generate_array(i)
+      start_time = time.time_ns()
       if choice == 1:
         BubbleSort.bubble_sort(arr)
       elif choice == 2:
         InsertionSort.insertion_sort(arr)
       elif choice == 3:
         MergeSort.merge_sort(arr)
-      execution_time = time.time() - start_time
+      execution_time = time.time_ns() - start_time
       total_time += execution_time
     average_execution_time = total_time / repeats
     print(i, " ", average_execution_time)
     i *= 2
 
 
-def generate_array():
+def generate_array(i):
   arr = []
-  for i in range(10):
-    arr.append(random.randint(0, 10))
+  for i in range(i):
+    arr.append(random.randint(0, i))
   return arr
 
 
